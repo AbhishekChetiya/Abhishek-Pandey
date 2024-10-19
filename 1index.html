@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Sleep Card</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a2e;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        .heading {
+            margin: 10px 0;
+        }
+        h1.heading {
+            color: #16c79a;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        #sum, #cardshow {
+            color: #f8f1f1;
+            font-size: 1.2em;
+        }
+        #cardshow {
+            margin: 20px 0;
+        }
+        #card img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .Game {
+            background-color: #16c79a;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .Game:hover {
+            background-color: #13a17b;
+        }
+        #exit-btn {
+            background-color: #e94560;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #exit-btn:hover {
+            background-color: #d13651;
+        }
+    </style>
+</head>
+    <body id="main" class="blackjack-body">
+        <nav></nav>
+        <h1 class="heading">Blackjack</h1>    
+        <h3 class="heading" id="message"></h3> 
+        <h3 class="heading" id="message1"></h3> 
+        <h3 class="heading" id="sum">Sum:-</h3>  
+        <h3 class="heading" style="margin: 3cm;" id="cardshow">Cards:-</h3> 
+        <div id="card"><img src=""></div>
+        <button class="Game" onclick="gamestart()">Start Game</button> 
+        <button class="Game" onclick="cardswipe()">Draw New Card</button>
+        <h3 class="heading" id="message2"></h3>
+        <script src="blackjack.js"></script>
+    </body>
+</html>

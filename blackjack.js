@@ -5,10 +5,7 @@ var sum =0;
 let Pay = 180;
 var won=0;
 document.getElementById("message2").textContent = "Amount You Have $" +Pay
-img = (src) => `<img id="patte${src}" src="/img/${src}.png">`;
-/*style =(src,position) => `#pattle${src}{
-    position:${position} 
-}`*/
+img = (src) => `<img id="patte${src}" src="./${src}.png">`;
 
 function updateCards(card){
     document.getElementById("card").innerHTML+= img(card);
@@ -22,7 +19,8 @@ function gamestart(){
    if(count <1 &&Pay >10){
         let card = Math.floor(Math.random()*13) +1;
         updateCards(card);
-        document.getElementById("card").innerHTML='<img src="/img/'+card+'.png">';
+        document.getElementById("card").innerHTML='<img src="./'+card+'.png">';
+
         sum += card;  document.getElementById("message1").textContent = "Thanks To Play this Game";
         document.getElementById("sum").textContent = "Sum:- " +sum;
         document.getElementById("cardshow").textContent += card;
@@ -49,7 +47,7 @@ function cardswipe(){
     
     if(sum===21 && !won){
         document.getElementById("cardshow").textContent = "Cards:-";
-        document.getElementById("card").innerHTML='<img src="/img/winner.jpg">';
+        document.getElementById("card").innerHTML='<img src="./winner.jpg">';
         document.getElementById("message").textContent = "Woho You got the blackJack && Money $35 Reward😍🤩🤑";
         Pay+=32;
         document.getElementById("message2").textContent = "Amount You Have $" +Pay;
@@ -64,4 +62,8 @@ function cardswipe(){
         Pay -=10;
         document.getElementById("message2").textContent = "Amount You Have $" +Pay;
     }}
+}
+
+function goToInteralLink(link) {
+    window.location.href = link; 
 }

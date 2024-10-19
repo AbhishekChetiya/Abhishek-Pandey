@@ -2,26 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Welcome To Blackjack Game</title>
-</head >
-<body id="main" class="blackjack-body">
-    <nav></nav>
-    <h1 class="heading">Blackjack</h1>    
-    <h3 class="heading" id="message"></h3> 
-    <h3 class="heading" id="message1"></h3> 
-    <h3 class="heading" id="sum">Sum:-</h3>  
-    <h3 class="heading" style="margin: 3cm;" id="cardshow">Cards:-</h3> 
-    <div id="card"><img src=""></div>
-    <button class="Game" onclick="gamestart()">Start Game</button> 
-    <button class="Game" onclick="cardswipe()">Draw New Card</button>
-    <h3 class="heading" id="message2"></h3>
+    <title>Sleep Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .header {
+            background-color: #00CED1;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        .content-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content-card h2 {
+            color: #00CED1;
+            margin-bottom: 20px;
+        }
+        .main-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .play-button {
+            background-color: #00CED1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .play-button:hover {
+            background-color: #00A9A9;
+        }
+    </style>
+</head>
+<body>
+    <div class="header text-center">
+        <h1>SLEEP CARD</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="content-card">
+                    <h2>About Me</h2>
+                    <p>I'm <b>Abhishek Pandey</b>, studying at <b>IET Lucknow</b> with skills in <b>C++, Python, JavaScript, HTML, and CSS</b>. Outside of work, I enjoy <b>listening to music</b>.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="content-card">
+                    <h2>Contact Me: Let's Connect!</h2>
+                    <p>Hello there! If you have any questions, inquiries, or just want to say hi, feel free to get in touch with me. I'm always open to new opportunities and collaborations.</p>
+                    <p class="mt-3"><strong>Email:</strong> YourEmail@example.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="content-card text-center">
+            <img src="./background.jpg" alt="Card game image" class="main-image">
+            <p class="mb-4">Cards are fun games! From old ones like Poker to new ones like Hearthstone. You need some luck and skill. Play with friends or on your phone. Simple, timeless fun!</p>
+            <button class="play-button" onclick="goToInteralLink('1index.html')">Play</button>
+        </div>
+    </div>
     <script src="blackjack.js"></script>
 </body>
-
 </html>
-<style>
-
-</style>
